@@ -11,12 +11,9 @@
 #raining > .location {
   border-bottom: 2px solid #dbf6e9;
   padding: 1em 0.6em;
-  /* transition: background-color 0.5s 0s ease; */
-  /* transition: background-color 5s 0s ease; */
 }
 #raining > .location:hover {
   border-radius: 5px;
-  /* background-color: #dbf6e9; */
   animation: fadeIn 2s ease;
   background: linear-gradient(180deg, #dbf6e9 60%, #1b6ca8);
 }
@@ -40,10 +37,6 @@
 #raining > .location > .amount {
   font-weight: bold;
   transition: color 1s 0s ease;
-}
-
-#raining > .location:hover .amount {
-  /* color: #0278ae; */
 }
 
 /* animation */
