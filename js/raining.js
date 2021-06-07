@@ -3,7 +3,7 @@ const weatherElement = document.querySelector('#weather');
 const forecastTitle = document.getElementsByTagName('h3')[1];
 
 let rainingModels = {
-	page: 110,
+	page: 0,
 	rainingRecords: null,
 	weatherForecast: null,
 	fetchRainingAPI: function() {
