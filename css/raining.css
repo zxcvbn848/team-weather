@@ -1,7 +1,77 @@
-#raining{}
-#raining>.location{
-	border-bottom:1px solid #000000;
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+/* rainging */
+#raining {
+  animation: move 2s ease;
+  background-color: #a5ecd7;
+  border-radius: 5px;
 }
-#raining>.location>.town{
-	font-weight:bold;
+
+/* location */
+#raining > .location {
+  border-bottom: 2px solid #dbf6e9;
+  padding: 1em 0.6em;
+  /* transition: background-color 0.5s 0s ease; */
+  /* transition: background-color 5s 0s ease; */
+}
+#raining > .location:hover {
+  border-radius: 5px;
+  /* background-color: #dbf6e9; */
+  animation: fadeIn 2s ease;
+  background: linear-gradient(180deg, #dbf6e9 60%, #1b6ca8);
+}
+#raining > .location:hover::before {
+  color: #51adcf;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f73d";
+}
+
+/* town */
+#raining > .location > .town {
+  font-weight: bold;
+  transition: color 1s 0s ease;
+}
+#raining > .location:hover .town {
+  color: #0278ae;
+}
+
+/* amount */
+#raining > .location > .amount {
+  font-weight: bold;
+  transition: color 1s 0s ease;
+}
+
+#raining > .location:hover .amount {
+  /* color: #0278ae; */
+}
+
+/* animation */
+@keyframes move {
+  0% {
+    opacity: 0.5;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background: #dbf6e9;
+  }
+  25% {
+    background: linear-gradient(180deg, #dbf6e9 90%, #1b6ca8);
+  }
+  50% {
+    background: linear-gradient(180deg, #dbf6e9 80%, #1b6ca8);
+  }
+  75% {
+    background: linear-gradient(180deg, #dbf6e9 70%, #1b6ca8);
+  }
+  100% {
+    background: linear-gradient(180deg, #dbf6e9 60%, #1b6ca8);
+  }
 }
