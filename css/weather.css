@@ -1,0 +1,96 @@
+#weather{
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+#weather>.location{
+    width: 20%;
+    border: 1px solid #F8F8F8;
+    border-radius: 5px;
+    position: relative;
+    height: 160px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+#weather>.location>.town{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+#weather>.location>.time{
+    position: absolute;
+    font-size: 7px;
+    right: 0px;
+    bottom: 0px;
+    color: #D3D3D3;
+}
+#weather>.location>.Wx{
+    position: absolute;
+    left: 5px;
+    bottom: 15px;
+    color: #A7A7A7;
+    font-size: 15px
+}
+#weather>.location>.PoP{
+    position: absolute;
+    top: 60%;
+    color: #A7A7A7;
+    font-size: 17px;
+}
+#weather>.location>.CI{
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+    color: #A7A7A7;
+    font-size: 15px
+}
+#weather>.location>.MinT{
+    position: absolute;
+    top: 50px;
+    left: 12%;
+    color: #7aa5f0;
+    font-size: 40px;
+}
+#weather>.location>.MaxT{
+    position: absolute;
+    top: 50px;
+    right: 12%;
+    color: #f58f8f;
+    font-size: 40px;
+
+}
+
+#weather > .location:hover {
+    background: #F8F8F8;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+    
+  }
+
+#weather>.location:hover>.MinT{
+    color: #4787F1 ;
+}
+#weather>.location:hover>.MaxT{
+    color: #FA5E5E ;
+}
+#weather>.location:hover>.PoP{
+    color: #868686;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    #weather>.location{
+        width: 40%; 
+        margin: 10px;   
+    }
+}
+ 
+
+
+@media screen and (max-width: 600px) {
+    #weather>.location{
+        width: 80%;    
+    }
+}
