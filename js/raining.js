@@ -101,27 +101,27 @@ let rainingViews = {
 			const rainDesc = document.createElement('div');
 			rainDesc.classList.add('Wx');
 			const rainDescData = location.weatherElement[0].time[0].parameter;
-			rainDesc.textContent = `下雨狀況：${rainDescData.parameterName}`;
+			rainDesc.textContent = `${rainDescData.parameterName}`;
 
 			const rainProbability = document.createElement('div');
 			rainProbability.classList.add('PoP');
 			const rainProbData = location.weatherElement[1].time[0].parameter;
-			rainProbability.textContent = `下雨機率：${rainProbData.parameterName}%`;
+			rainProbability.textContent = `降雨機率：${rainProbData.parameterName}%`;
 
 			const tempDesc = document.createElement('div');
 			tempDesc.classList.add('CI');
 			const tempDescData = location.weatherElement[3].time[0].parameter;
-			tempDesc.textContent = `氣溫狀況：${tempDescData.parameterName}`;
+			tempDesc.textContent = `${tempDescData.parameterName}`;
 
 			const minT = document.createElement('div');
 			minT.classList.add('MinT');
 			const minTData = location.weatherElement[2].time[0].parameter;
-			minT.textContent = `最低溫：${minTData.parameterName}°${minTData.parameterUnit}`;
+			minT.textContent = `${minTData.parameterName}°${minTData.parameterUnit}`;
 
 			const maxT = document.createElement('div');
 			maxT.classList.add('MaxT');
 			const maxTData = location.weatherElement[4].time[0].parameter;
-			maxT.textContent = `最高溫：${maxTData.parameterName}°${maxTData.parameterUnit}`;
+			maxT.textContent = `${maxTData.parameterName}°${maxTData.parameterUnit}`;
 
 			item.appendChild(town);
 			item.appendChild(time);
