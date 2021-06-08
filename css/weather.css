@@ -14,7 +14,6 @@
     margin: 5px;
     display: flex;
     justify-content: center;
-    background: #F8F8F8;
 }
 #weather>.location>.town{
     font-size: 25px;
@@ -52,16 +51,33 @@
     position: absolute;
     top: 50px;
     left: 12%;
-    color: #689DF5;
+    color: #7aa5f0;
     font-size: 40px;
 }
 #weather>.location>.MaxT{
     position: absolute;
     top: 50px;
     right: 12%;
-    color: #F77B7B;
+    color: #f58f8f;
     font-size: 40px;
 
+}
+
+#weather > .location:hover {
+    background: #F8F8F8;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+    
+  }
+
+#weather>.location:hover>.MinT{
+    color: #4787F1 ;
+}
+#weather>.location:hover>.MaxT{
+    color: #FA5E5E ;
+}
+#weather>.location:hover>.PoP{
+    color: #868686;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1200px) {
