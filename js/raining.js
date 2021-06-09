@@ -43,7 +43,7 @@ let rainingViews = {
 		let endIndex = (page + 1) * 10;
 
 		const spinner = document.querySelector('#spinner-raining');
-		rainingElement.removeChild(spinner);
+		document.body.removeChild(spinner);
 
 		console.log(rainingModels.rainingRecords.location.length);
 	
@@ -81,7 +81,7 @@ let rainingViews = {
 	},
 	renderWeather: function() {
 		const spinner = document.querySelector('#spinner-weather');
-		weatherElement.removeChild(spinner);
+		document.body.removeChild(spinner);
 
 		const locationArray = rainingModels.weatherForecast.location;
 
@@ -158,7 +158,7 @@ let rainingViews = {
       spinner.appendChild(spinnerSectorRed);
       spinner.appendChild(spinnerSectorBlue);
       spinner.appendChild(spinnerSectorGreen);
-      element.appendChild(spinner);
+      document.body.insertBefore(spinner, element);
 	}
 };
 
