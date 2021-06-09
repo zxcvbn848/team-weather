@@ -3,22 +3,29 @@
 /* rainging */
 #raining {
   animation: move 2s ease;
-  background-color: #a5ecd7;
   border-radius: 5px;
+
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* location */
 #raining > .location {
-  border-bottom: 2px solid #dbf6e9;
-  padding: 1em 0.6em;
+  border-bottom: 2px solid var(--light-gray);
+  padding: 1.8em 0.6em;
+  width: 20%;
+  margin: 5px;
 }
 #raining > .location:hover {
   border-radius: 5px;
   animation: fadeIn 2s ease;
-  background: linear-gradient(180deg, #dbf6e9 60%, #1b6ca8);
+  background: linear-gradient(180deg, var(--light-gray) 60%, var(--main-blue));
 }
+
 #raining > .location:hover::before {
-  color: #51adcf;
+  color: var(--main-blue);
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f73d";
@@ -26,11 +33,12 @@
 
 /* town */
 #raining > .location > .town {
+  font-size: 25px;
   font-weight: bold;
   transition: color 1s 0s ease;
 }
 #raining > .location:hover .town {
-  color: #0278ae;
+  color: var(--main-blue);
 }
 
 /* amount */
@@ -53,18 +61,47 @@
 
 @keyframes fadeIn {
   0% {
-    background: #dbf6e9;
+    background: var(--light-gray);
   }
   25% {
-    background: linear-gradient(180deg, #dbf6e9 90%, #1b6ca8);
+    background: linear-gradient(
+      180deg,
+      var(--light-gray) 90%,
+      var(--main-blue)
+    );
   }
   50% {
-    background: linear-gradient(180deg, #dbf6e9 80%, #1b6ca8);
+    background: linear-gradient(
+      180deg,
+      var(--light-gray) 80%,
+      var(--main-blue)
+    );
   }
   75% {
-    background: linear-gradient(180deg, #dbf6e9 70%, #1b6ca8);
+    background: linear-gradient(
+      180deg,
+      var(--light-gray) 70%,
+      var(--main-blue)
+    );
   }
   100% {
-    background: linear-gradient(180deg, #dbf6e9 60%, #1b6ca8);
+    background: linear-gradient(
+      180deg,
+      var(--light-gray) 60%,
+      var(--main-blue)
+    );
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  #raining > .location {
+    width: 40%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #raining > .location {
+    width: 80%;
   }
 }

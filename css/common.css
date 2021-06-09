@@ -1,3 +1,70 @@
-body{
-	font-size:20px;
+:root {
+  --light-pink50: #f58f8f50;
+  --main-pink99: #fa5e5e99;
+  --main-pink: #fa5e5e;
+  --light-blue: #7aa5f0;
+  --main-blue: #4787f1;
+  --light-gray: #f6f6f6;
+  --main-gray: #494949;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: white;
+  text-align: center;
+}
+div {
+  color: var(--main-gray);
+}
+
+h3 {
+  margin: 0;
+  text-align: left;
+  padding: 0.5em 5em 0.5em 10vw;
+  background: linear-gradient(
+    90deg,
+    var(--main-pink99) 20%,
+    var(--light-pink50)
+  );
+  color: var(--main-gray);
+  font-size: 27px;
+  width: 100%;
+  border-radius: 0px 0px 15px 0px;
+}
+
+button {
+  background: none;
+  border: 1px var(--light-blue) solid;
+  color: var(--light-blue);
+  height: 2.5em;
+  width: 5em;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 30px 0px 60px;
+}
+
+button:hover {
+  background: var(--light-blue);
+  color: white;
+}
+button:disabled {
+  background: none;
+  color: var(--light-blue);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  #raining > .location {
+    width: 40%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    text-align: center;
+    padding: 0.5em 0px;
+    border-radius: 0px;
+  }
 }
